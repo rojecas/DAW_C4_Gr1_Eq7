@@ -1,0 +1,171 @@
+===============================================================================================================
+NodeJS
+===============================================================================================================
+
+Node.js es un entorno en tiempo de ejecución multiplataforma, de código abierto, para la capa del servidor
+(pero no limitándose a ello) basado en el lenguaje de programación JavaScript, asíncrono, con E/S de datos
+en una arquitectura orientada a eventos y basado en el motor V8 de Google. Fue creado con el enfoque de
+ser útil en la creación de programas de red altamente escalables, como por ejemplo, servidores web.
+Al contrario que la mayoría del código JavaScript, no se ejecuta en un navegador, sino en el servidor.
+
+Instalacion de NodeJS
+
+URL:  https://nodejs.org/en/
+
+Version instalada: 
+// comando para ver que version tiene instalada	
+	$ node -v
+	v18.12.0 LTS
+
+===============================================================================================================
+NPM
+===============================================================================================================
+
+npm es el sistema de gestión de paquetes por defecto para Node.js, un entorno de ejecución para JavaScript, bajo Artistic License 2.0. 
+
+// comando para ver que version tiene instalada	
+	$ npm -v
+	8.19.2
+
+===============================================================================================================
+Express
+===============================================================================================================
+
+Express.js o simplemente Express, es un entorno de trabajo para aplicaciones web para el programario Node.js, de código abierto y con licencia MIT. Se utiliza para desarrollar aplicaciones web y APIs. 
+Crea un entorno de servidor Web para NodeJs
+
+URL:  http://expressjs.com/
+
+Instalación de ExpressJS
+Se debe instalar en cada aplicacion que se esta desarrollando
+
+	$ npm install express --save
+	
+// comando para ver que version tiene instalada	
+	$ npm list express	
+	
+// ejemplo de chequeo de version de express
+//Path: ServTec@ServTec MINGW64 /d/MySource/Ciclo4/loopback/pedidos
+$ npm list express
+pedidos@0.0.1 D:\MySource\Ciclo4\loopback\pedidos
+├─┬ @loopback/rest@12.0.4
+│ ├─┬ @loopback/express@5.0.4
+│ │ └── express@4.18.2 deduped
+│ └── express@4.18.2
+└─┬ @loopback/testlab@5.0.4
+  └── express@4.18.2 deduped
+	
+
+===============================================================================================================
+Loopback
+===============================================================================================================
+
+Loopback es un framework de codigo abierto para NodeJS and TypeScript basado en ExpressJs
+Ayuda a crear APIs y microservices de forma rapida compuestas desde sistemas backend como bases de datos
+y servicios SOAP y REST
+
+
+Instalación de Loopback
+
+// Prerequisite NodeJs: you need to have installed NodeJs previoously install loopback
+// check your installed NodeJs version with the following command
+	node -v or node –version
+	
+// create and enter to the project folder
+// explanation of command: node package manager _ Install _ global _ loopback/cli _ Command line interface
+	npm i -g @loopback/cli
+
+// Check and fix installation issues
+	npm audit fix --force
+
+//How determine Loopback version
+   npm ls loopback
+
+
+===============================================================================================================
+Creacion de un nuevo proyecto
+===============================================================================================================	
+//1. Create a new project
+	lb4 app
+// follow the instructions given by the console	
+
+// 2. init the npm
+	npm init 
+
+//3. Install the connector of the MongoDB with the app
+	npm install mongoose	
+
+//4. Create a Data source
+	lb4 datasource
+	
+//Example of creation of datasource using mongodb database engine
+$ lb4 datasource
+? Nombre de Datasource: mongodb
+? Seleccione el conector para mongodb:  MongoDB (supported by StrongLoop)
+? Connection String url to override other settings (eg: mongodb://username:password@hostname:port/database):
+? host:
+? port:
+? user:
+? password: [hidden]
+? database:
+? Feature supported by MongoDB v3.1.0 and above: Yes
+   create src\datasources\mongodb.datasource.ts
+
+//5. create Model/clases of the application
+	lb4 model
+
+//6. create repository of the application
+	lb4 repository
+	
+//7. create Relation between the models of the application
+	lb4 relation
+	
+//8. create Service 
+	lb4 service
+
+//Example of creation of service
+//Path: ServTec@ServTec MINGW64 /d/MySource/MascotaFeliz/mascota-feliz
+$ lb4 service
+? Tipo de Service: Clase de servicio local vinculada a contexto de aplicación
+? Nombre de Service: Notificacion
+   create src\services\notificacion.service.ts
+
+No change to package.json was detected. No package manager install will be executed.
+   update src\services\index.ts
+
+Service Notificacion se ha/han creado en src\services	
+
+//9. create Controller
+	lb4 controller
+
+//Example of creation of Controller
+//Path: ServTec@ServTec MINGW64 /d/MySource/MascotaFeliz/mascota-feliz
+$ lb4 controller
+? Nombre de clase Controller: Usuario
+Controller Usuario se creará en src/controllers/usuario.controller.ts
+
+? ¿Qué especie de controlador desea generar? Controlador REST con funciones CRUD
+? ¿Cuál es el nombre del modelo que se va a utilizar con este repositorio CRUD? Usuario
+? ¿Cuál es el nombre del repositorio CRUD? UsuarioRepository
+? ¿Cuál es el nombre de la propiedad de ID? id
+? ¿Cuál es el tipo del ID? string
+? ¿Se omite el ID cuando se crea una instancia nueva? Yes
+? ¿Cuál es el nombre de la vía de acceso HTTP base de las operaciones CRUD? /usuarios
+   create src\controllers\usuario.controller.ts
+
+No change to package.json was detected. No package manager install will be executed.
+   update src\controllers\index.ts
+
+Controller Usuario se ha/han creado en src\controllers	
+	
+// Install Criptography methods   
+	npm i crypto-js
+	
+// Install Password generator methods
+	npm i password-generator
+	
+// Install Fetch methods, to be able to call previously writen microservices 
+	npm i node-fetch
+
+// install token management tools	
+npm i jsonwebtoken	
