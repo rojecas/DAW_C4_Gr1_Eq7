@@ -149,7 +149,7 @@ Controller Usuario se creará en src/controllers/usuario.controller.ts
 ? ¿Cuál es el nombre del repositorio CRUD? UsuarioRepository
 ? ¿Cuál es el nombre de la propiedad de ID? id
 ? ¿Cuál es el tipo del ID? string
-? ¿Se omite el ID cuando se crea una instancia nueva? Yes
+? ¿Se omite el ID cuando se crea una instancia nueva? Yes // porque lo crea el mongodb
 ? ¿Cuál es el nombre de la vía de acceso HTTP base de las operaciones CRUD? /usuarios
    create src\controllers\usuario.controller.ts
 
@@ -160,12 +160,36 @@ Controller Usuario se ha/han creado en src\controllers
 	
 // Install Criptography methods   
 	npm i crypto-js
+
+//Example of installation
+$ npm i crypto-js
+
+added 1 package, and audited 672 packages in 3s
+
+83 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities	
+	
 	
 // Install Password generator methods
 	npm i password-generator
 	
+//Example of installation
+$ npm i password-generator
+
+added 1 package, and audited 673 packages in 2s
+
+83 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+	
 // Install Fetch methods, to be able to call previously writen microservices 
 	npm i node-fetch
+	
+	npm i node-fetch@2.6.5
+	npm i @types/node-fetch
 
 // install token management tools	
 npm i jsonwebtoken	
