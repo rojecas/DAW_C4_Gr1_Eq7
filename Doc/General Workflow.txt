@@ -192,4 +192,12 @@ found 0 vulnerabilities
 	npm i @types/node-fetch
 
 // install token management tools	
-npm i jsonwebtoken	
+npm i jsonwebtoken
+
+// install authentication
+	npm i @loopback/authentication
+
+// install security
+	npm i @loopback/security
+
+npm i parse-bearer-token
