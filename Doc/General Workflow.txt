@@ -201,3 +201,92 @@ npm i jsonwebtoken
 	npm i @loopback/security
 
 npm i parse-bearer-token
+
+==============================================================================================================
+Angular
+==============================================================================================================
+
+// instalacion de angular
+
+npm install -g @angular/cli
+
+ng new
+
+ng serve -o
+
+ng serve port: 4900 -o
+
+ng generate module modulos/administracion --routing
+
+	ng generate component modulos/administracion/usuarios/crearUsuario
+	ng generate component modulos/administracion/usuarios/consultarUsuario
+	ng generate component modulos/administracion/usuarios/actualizarUsuario
+	ng generate component modulos/administracion/usuarios/eliminarUsuario
+	
+	ng generate component modulos/administracion/prodServ/crear
+	ng generate component modulos/administracion/prodServ/consultar
+	ng generate component modulos/administracion/prodServ/actualizar
+	ng generate component modulos/administracion/prodServ/eliminar
+	
+	ng generate component modulos/administracion/sucursal/crearSucursal
+	ng generate component modulos/administracion/sucursal/consultarSucursal
+	ng generate component modulos/administracion/sucursal/actualizarSucursal
+	ng generate component modulos/administracion/sucursal/eliminarSucursal
+
+	ng generate component modulos/administracion/mascotas/crearMascotas
+	ng generate component modulos/administracion/mascotas/consultarMascotas
+	ng generate component modulos/administracion/mascotas/actualizarMascotas
+	ng generate component modulos/administracion/mascotas/eliminarMascotas
+
+//comando para generar modulos
+ng generate module modulos/seguridad --routing
+
+	ng generate component modulos/seguridad/identificacion
+	ng generate component modulos/seguridad/recuperarClave
+	ng generate component modulos/seguridad/cambiarClave
+
+//comando para generar modulos
+ng generate module modulos/gestion --routing
+
+	ng generate component modulos/gestion/afiliaciones/crearAfiliaciones
+	ng generate component modulos/gestion/afiliaciones/consultarAfiliaciones
+	ng generate component modulos/gestion/afiliaciones/actualizarAfiliaciones
+	ng generate component modulos/gestion/afiliaciones/eliminarAfiliaciones
+
+	ng generate component modulos/gestion//crear
+	/consultar
+	/actualizar
+	/eliminar
+	
+	ng generate component modulos/gestion/
+	/consultar
+	/actualizar
+	/eliminar
+	
+//comando para generar componentes de uso general
+	ng generate component plantilla/barra-nav
+	ng generate component plantilla/piePagina
+	ng generate component plantilla/inicio
+	
+//Install Materialize on the app folder	
+	npm install materialize-css@next
+
+
+
+Modulos:
+- administracion
+	- usuarios
+	- mascotas
+	- productoServicios
+	- sucursales
+	- plan
+	- prospecto
+- seguridad
+	- identificacion
+	- cambioClave
+	- recuperarClave
+- gestion
+	- Afiliaciones
+    - Reportes
+	- ...
+	
