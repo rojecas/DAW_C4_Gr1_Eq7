@@ -19,6 +19,14 @@ import { CrearMascotasComponent } from './mascotas/crear-mascotas/crear-mascotas
 import { ConsultarMascotasComponent } from './mascotas/consultar-mascotas/consultar-mascotas.component';
 import { ActualizarMascotasComponent } from './mascotas/actualizar-mascotas/actualizar-mascotas.component';
 import { EliminarMascotasComponent } from './mascotas/eliminar-mascotas/eliminar-mascotas.component';
+import { CrearProspectosComponent } from './prospectos/crear-prospectos/crear-prospectos.component';
+import { ConsultarProspectosComponent } from './prospectos/consultar-prospectos/consultar-prospectos.component';
+import { ActualizarProspectosComponent } from './prospectos/actualizar-prospectos/actualizar-prospectos.component';
+import { EliminarProspectosComponent } from './prospectos/eliminar-prospectos/eliminar-prospectos.component';
+import { CrearPlanesComponent } from './planes/crear-planes/crear-planes.component';
+import { ConsultarPlanesComponent } from './planes/consultar-planes/consultar-planes.component';
+import { ActualizarPlanesComponent } from './planes/actualizar-planes/actualizar-planes.component';
+import { EliminarPlanesComponent } from './planes/eliminar-planes/eliminar-planes.component';
 
 
 @NgModule({
@@ -39,7 +47,15 @@ import { EliminarMascotasComponent } from './mascotas/eliminar-mascotas/eliminar
     CrearMascotasComponent,
     ConsultarMascotasComponent,
     ActualizarMascotasComponent,
-    EliminarMascotasComponent
+    EliminarMascotasComponent,
+    CrearProspectosComponent,
+    ConsultarProspectosComponent,
+    ActualizarProspectosComponent,
+    EliminarProspectosComponent,
+    CrearPlanesComponent,
+    ConsultarPlanesComponent,
+    ActualizarPlanesComponent,
+    EliminarPlanesComponent
   ],
   imports: [
     CommonModule,

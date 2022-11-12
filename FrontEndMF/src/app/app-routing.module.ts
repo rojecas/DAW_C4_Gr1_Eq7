@@ -1,5 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ErrorComponent } from './plantilla/error/error.component';
 import { InicioComponent } from './plantilla/inicio/inicio.component';
 
 const routes: Routes = [
@@ -7,19 +8,28 @@ const routes: Routes = [
     path: "inicio",
     component: InicioComponent
   },
- /*  {
-    path: "/",
-    pathMatch:"full" ,
-    redirecTo:"/inicio"
-  },
   {
     path: "",
-    component: 
+    pathMatch: "full",
+    redirectTo: '/inicio'
   },
   {
-    path: "",
-    component: 
-  } */
+    path: "seguridad",
+    loadChildren: () => import("./modulos/seguridad/seguridad.module").then(x=> x.SeguridadModule)
+},
+{
+  path: "gestion",
+  loadChildren: () => import("./modulos/gestion/gestion.module").then(x=> x.GestionModule)
+},
+{
+  path: "administracion",
+  loadChildren: () => import("./modulos/administracion/administracion.module").then(x=> x.AdministracionModule)
+},
+  {
+    path: '**',
+    component: ErrorComponent
+  }
+
 ];
 
 @NgModule({

@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { PiePaginaComponent } from './plantilla/pie-pagina/pie-pagina.component';
 import { BarraNavComponent } from './plantilla/barra-nav/barra-nav.component';
 import { InicioComponent } from './plantilla/inicio/inicio.component';
+import { ErrorComponent } from './plantilla/error/error.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PiePaginaComponent,
     BarraNavComponent,
-    InicioComponent
+    InicioComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
