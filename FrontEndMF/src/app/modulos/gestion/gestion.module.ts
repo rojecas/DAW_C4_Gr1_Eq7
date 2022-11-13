@@ -6,6 +6,7 @@ import { CrearAfiliacionesComponent } from './afiliaciones/crear-afiliaciones/cr
 import { ConsultarAfiliacionesComponent } from './afiliaciones/consultar-afiliaciones/consultar-afiliaciones.component';
 import { ActualizarAfiliacionesComponent } from './afiliaciones/actualizar-afiliaciones/actualizar-afiliaciones.component';
 import { EliminarAfiliacionesComponent } from './afiliaciones/eliminar-afiliaciones/eliminar-afiliaciones.component';
+import { CrearContactameComponent } from './contactame/crear-contactame/crear-contactame.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { EliminarAfiliacionesComponent } from './afiliaciones/eliminar-afiliacio
     CrearAfiliacionesComponent,
     ConsultarAfiliacionesComponent,
     ActualizarAfiliacionesComponent,
-    EliminarAfiliacionesComponent
+    EliminarAfiliacionesComponent,
+    CrearContactameComponent
   ],
   imports: [
     CommonModule,

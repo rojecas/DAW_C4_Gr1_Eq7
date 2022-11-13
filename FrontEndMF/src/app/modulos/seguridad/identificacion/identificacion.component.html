@@ -1,16 +1,16 @@
 <body class="container" ng-app="mainModule" ng-controller="mainController">
     <div id="login-page" class="container">
         <div class="col s12 z-depth-6 card-panel">
-            <form [formGroup]="fgValidador" class="login-form">
+            <form [formGroup]="fgValidador" (ngSubmit)="IdentificarUsuario()" class="login-form">
                 <div class="container">
-                    <div class="input-field col s12">
+                    <div class="input-field col s10">
                         <i class="material-icons prefix">mail_outline</i>
                         <input formControlName="usuario" class="validate" id="email" type="email">
                         <label for="email" data-error="wrong" data-success="right">Email</label>
                     </div>
                 </div>
                 <div class="container">
-                    <div class="input-field col s12">
+                    <div class="input-field col s10">
                         <i class="material-icons prefix">lock_outline</i>
                         <input formControlName="clave" id="password" type="password">
                         <label for="password">Contraseña</label>
@@ -18,8 +18,11 @@
                 </div>
 
                 <div class="container">
-                    <div class="input-field col s12">
-                        <a href="#" class="btn waves-effect waves-blue col s8">Ingresar</a>
+                    <div class="input-field col s10" >
+                       <!--  <a href="#" class="btn waves-effect waves-blue col s8"> Ingresar </a> -->
+                       <button [disabled]="!fgValidador.valid" class="btn waves-effect waves-blue col s8" type="submit" name="action">
+                         Ingresar
+                        </button>
                     </div>
                 </div>
 
