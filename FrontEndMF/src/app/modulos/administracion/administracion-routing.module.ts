@@ -79,7 +79,7 @@ const routes: Routes = [
   },
   /*  Rutas de Admin Mascotas */
     {
-      path: 'crear-mascotas',
+      path: 'crear-mascota',
       component: CrearMascotasComponent
     },
     {

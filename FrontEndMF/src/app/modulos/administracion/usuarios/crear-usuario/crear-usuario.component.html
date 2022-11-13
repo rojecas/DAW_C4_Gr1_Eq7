@@ -1,1 +1,75 @@
-<p>crear-usuario works!</p>
+<div class="container">
+    <form class="col s12 z-depth-6 card-panel">
+        <div class="row">
+            <div class="input-field col s6">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="first_name" type="text" class="validate" required>
+                <label for="first_name">Nombres</label>
+            </div>
+            <div class="input-field col s6">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="last_name" type="text" class="validate" required>
+                <label for="last_name">Apellidos</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <i class="material-icons prefix">phone</i>
+                <input id="telefono" type="text" class="validate" required>
+                <label for="telefono">Teléfono</label>
+            </div>
+
+            <div class="input-field col s6">
+                <i class="material-icons prefix">email</i>
+                <input id="email" type="email" class="validate" required>
+                <label for="email">Correo Electronico</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s6">
+                <i class="material-icons prefix">house</i>
+                <input id="disabled" type="text" class="validate" required>
+                <label for="disabled">Dirección de Residencia</label>
+            </div>
+            <div class="input-field col s6">
+                <input id="nombreMascota" type="text" class="validate" required>
+                <label for="nombreMascota">Nombre Mascota</label>
+            </div>
+
+        </div>
+        <div class="row">
+
+            <div class="input-field col s6">
+                <input id="especie" type="text" class="validate" required>
+                <label for="especie">Especie</label>
+            </div>
+            <div class="input-field col s6">
+                <input id="raza" type="text" class="validate" required>
+                <label for="raza">Raza</label>
+            </div>
+        </div>
+
+        <div class="file-field input-field">
+            <div class="btn">
+                <span>Buscar Archivo: </span>
+                <input type="file" multiple>
+            </div>
+            <div class="file-path-wrapper">
+                <input class="file-path validate" type="text" placeholder="Sube Foto de tu Mascota" required>
+            </div>
+        </div>
+        <div class="input-field col s6">
+            <i class="material-icons prefix">mode_edit</i>
+            <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+            <label for="icon_prefix2">Comentarios</label>
+        </div>          
+        <div class="row">
+            <div class="container">
+                <div class="input-field col s6">
+                    <a href="#" class="btn waves-effect waves-light col s12">Registrar Afiliación</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

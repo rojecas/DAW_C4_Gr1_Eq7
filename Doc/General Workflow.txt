@@ -243,10 +243,10 @@ ng generate module modulos/administracion --routing
 	ng generate component modulos/administracion/prospectos/actualizarProspectos
 	ng generate component modulos/administracion/prospectos/eliminarProspectos
 	
-	ng generate component modulos/administracion/planes/crear
-	/consultar
-	/actualizar
-	/eliminar
+	ng generate component modulos/administracion/planes/crearPlanes
+	ng generate component modulos/administracion/planes/consultarPlanes
+	ng generate component modulos/administracion/planes/actualizarPlanes
+	ng generate component modulos/administracion/planes/eliminarPlanes
 	
 	ng generate component modulos/administracion//crear
 	/consultar

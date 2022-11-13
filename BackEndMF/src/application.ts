@@ -1,18 +1,20 @@
-import {BootMixin} from '@loopback/boot';
-import {ApplicationConfig} from '@loopback/core';
+import { AuthenticationComponent, registerAuthenticationStrategy } from '@loopback/authentication';
+import { BootMixin } from '@loopback/boot';
+import { ApplicationConfig } from '@loopback/core';
+import { RestApplication } from '@loopback/rest';
 import {
   RestExplorerBindings,
   RestExplorerComponent,
 } from '@loopback/rest-explorer';
-import {RepositoryMixin} from '@loopback/repository';
-import {RestApplication} from '@loopback/rest';
-import {ServiceMixin} from '@loopback/service-proxy';
+import { RepositoryMixin } from '@loopback/repository';
+import { ServiceMixin } from '@loopback/service-proxy';
 import path from 'path';
-import {MySequence} from './sequence';
+import { MySequence } from './sequence';
 import { EstrategiaAdministrador } from './strategies/admin.strategies';
-import { AuthenticationComponent, registerAuthenticationStrategy } from '@loopback/authentication';
+import { EstrategiaCliente } from './strategies/cliente.strategies';
+import { EstrategiaVendedor } from './strategies/vendedor.strategies';
 
-export {ApplicationConfig};
+export { ApplicationConfig };
 
 export class MascotaFelizApplication extends BootMixin(
   ServiceMixin(RepositoryMixin(RestApplication)),
@@ -42,8 +44,18 @@ export class MascotaFelizApplication extends BootMixin(
         nested: true,
       },
     };
-    registerAuthenticationStrategy(this, EstrategiaAdministrador);
-    // registrar aqui estrategia para el asesor y para cliente
+    // registrar aqui las estrategias de autenticacion para los distintos roles.
+    /* registerAuthenticationStrategy({ arg0: this, EstrategiaAdministrador });
+    registerAuthenticationStrategy({ arg0: this, EstrategiaCliente });
+    registerAuthenticationStrategy({ arg0: this, EstrategiaVendedor });
+    this.component(AuthenticationComponent); */
+    registerAuthenticationStrategy( this, EstrategiaAdministrador);
+    registerAuthenticationStrategy( this, EstrategiaCliente);
+    registerAuthenticationStrategy(this, EstrategiaVendedor);
     this.component(AuthenticationComponent);
   }
 }
+
+/* function registerAuthenticationStrategy(arg0: unknown) {
+  throw new Error('Function not implemented');
+} */
