@@ -260,6 +260,7 @@ ng generate module modulos/seguridad --routing
 	ng generate component modulos/seguridad/identificacion
 	ng generate component modulos/seguridad/recuperarClave
 	ng generate component modulos/seguridad/cambiarClave
+	ng generate component modulos/seguridad/cerrarSesion
 
 //comando para generar modulos
 ng generate module modulos/gestion --routing
@@ -289,7 +290,8 @@ ng generate module modulos/gestion --routing
 	npm install materialize-css@next
 	
 
-npm i cryptojs
+//install cryptography libra
+npm i crypto-js
 
 npm i @types/crypto-js
 	
@@ -315,4 +317,8 @@ Modulos:
 	- Afiliaciones
     - Reportes
 	- ...
+	
+	495b0fdd3e418e2e881a1f3352e4ea67
+	495b0fdd3e418e2e881a1f3352e4ea67
+	19cd896aeeeb0698803146fec3ef4a59
 	

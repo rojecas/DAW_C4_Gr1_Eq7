@@ -8,16 +8,18 @@
                     </p>
                     <p class="white-text">Oficina Ppal <br>Cra 38 # 45-59 <br>B/ Las Flores
                         <br>
-                        Ibagué, Tolima.</p>
+                        Ibagué, Tolima.
+                    </p>
                 </div>
                 <div class="col l4 offset-l2 s12">
                     <h5 class="white-text">Links</h5>
                     <ul>
-                        <li><a routerLink="/administracion/crear-usuario">Usuarios</a></li>
-                        <li><a routerLink="/gestion/contacto">Quiero Información</a></li>
-                        <li><a routerLink="/administracion/crear-mascota">Afiliacion Mascota</a></li>
-                        <li><a routerLink="/seguridad/cambiar-clave">Cambiar Clave</a></li>
-                        <li><a routerLink="/seguridad/identificacion">Iniciar Sesión</a></li>
+                        <li *ngIf="sesionIniciada"><a routerLink="/administracion/crear-usuario">Usuarios</a></li>
+                    <li *ngIf="sesionIniciada"><a routerLink="/gestion/contactame">Quiero Información</a></li>
+                    <li *ngIf="sesionIniciada"><a routerLink="/administracion/crear-mascota">Afiliacion Mascota</a></li>
+                    <li *ngIf="sesionIniciada"><a routerLink="/seguridad/cambiar-clave">Cambiar Clave</a></li>
+                    <li *ngIf="sesionIniciada"><a routerLink="/seguridad/cerrar-sesion">Cerrar Sesión</a></li>
+                    <li *ngIf="!sesionIniciada"><a routerLink="/seguridad/identificar">Iniciar Sesión</a></li>
                     </ul>
                 </div>
             </div>
