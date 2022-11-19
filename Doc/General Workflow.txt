@@ -237,6 +237,7 @@ ng generate module modulos/administracion --routing
 	ng generate component modulos/administracion/mascotas/consultarMascotas
 	ng generate component modulos/administracion/mascotas/actualizarMascotas
 	ng generate component modulos/administracion/mascotas/eliminarMascotas
+	ng generate component modulos/administracion/mascotas/listarMascotas
 	
 	ng generate component modulos/administracion/prospectos/crearProspectos
 	ng generate component modulos/administracion/prospectos/consultarProspectos
@@ -268,7 +269,7 @@ ng generate module modulos/gestion --routing
 	ng generate component modulos/gestion/afiliaciones/actualizarAfiliaciones
 	ng generate component modulos/gestion/afiliaciones/eliminarAfiliaciones
 
-	ng generate component modulos/gestion//crear
+	ng generate component modulos/gestion/contactame/crearContactame
 	/consultar
 	/actualizar
 	/eliminar
@@ -286,6 +287,15 @@ ng generate module modulos/gestion --routing
 	
 //Install Materialize on the app folder	
 	npm install materialize-css@next
+	
+
+npm i cryptojs
+
+npm i @types/crypto-js
+	
+// Install services
+// ng generate service <path>
+	ng g s <path>
 
 
 

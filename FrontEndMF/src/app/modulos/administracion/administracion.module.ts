@@ -27,6 +27,7 @@ import { CrearPlanesComponent } from './planes/crear-planes/crear-planes.compone
 import { ConsultarPlanesComponent } from './planes/consultar-planes/consultar-planes.component';
 import { ActualizarPlanesComponent } from './planes/actualizar-planes/actualizar-planes.component';
 import { EliminarPlanesComponent } from './planes/eliminar-planes/eliminar-planes.component';
+import { ListarMascotasComponent } from './mascotas/listar-mascotas/listar-mascotas.component';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { EliminarPlanesComponent } from './planes/eliminar-planes/eliminar-plane
     CrearPlanesComponent,
     ConsultarPlanesComponent,
     ActualizarPlanesComponent,
-    EliminarPlanesComponent
+    EliminarPlanesComponent,
+    ListarMascotasComponent
   ],
   imports: [
     CommonModule,

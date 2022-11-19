@@ -4,6 +4,7 @@ import { ActualizarMascotasComponent } from './mascotas/actualizar-mascotas/actu
 import { ConsultarMascotasComponent } from './mascotas/consultar-mascotas/consultar-mascotas.component';
 import { CrearMascotasComponent } from './mascotas/crear-mascotas/crear-mascotas.component';
 import { EliminarMascotasComponent } from './mascotas/eliminar-mascotas/eliminar-mascotas.component';
+import { ListarMascotasComponent } from './mascotas/listar-mascotas/listar-mascotas.component';
 import { ActualizarPlanesComponent } from './planes/actualizar-planes/actualizar-planes.component';
 import { ConsultarPlanesComponent } from './planes/consultar-planes/consultar-planes.component';
 import { CrearPlanesComponent } from './planes/crear-planes/crear-planes.component';
@@ -93,6 +94,10 @@ const routes: Routes = [
     {
       path: 'eliminar-mascotas',
       component: EliminarMascotasComponent
+    },
+    {
+      path: 'listar-mascotas',
+      component: ListarMascotasComponent
     },
     /*  Rutas de Admin Prospectos */
       {
