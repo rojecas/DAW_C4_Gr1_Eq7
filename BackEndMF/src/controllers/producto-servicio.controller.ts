@@ -1,31 +1,28 @@
+import {authenticate} from '@loopback/authentication';
 import {
   Count,
   CountSchema,
   Filter,
   FilterExcludingWhere,
   repository,
-  Where,
+  Where
 } from '@loopback/repository';
 import {
-  post,
-  param,
-  get,
-  getModelSchemaRef,
-  patch,
-  put,
-  del,
-  requestBody,
-  response,
+  del, get,
+  getModelSchemaRef, param, patch, post, put, requestBody,
+  response
 } from '@loopback/rest';
 import {ProductoServicio} from '../models';
 import {ProductoServicioRepository} from '../repositories';
 
+@authenticate("admin")
 export class ProductoServicioController {
   constructor(
     @repository(ProductoServicioRepository)
-    public productoServicioRepository : ProductoServicioRepository,
-  ) {}
+    public productoServicioRepository: ProductoServicioRepository,
+  ) { }
 
+  @authenticate.skip()
   @post('/producto-servicios')
   @response(200, {
     description: 'ProductoServicio model instance',
@@ -47,7 +44,8 @@ export class ProductoServicioController {
     return this.productoServicioRepository.create(productoServicio);
   }
 
-  @get('/producto-servicios/count')
+  @authenticate.skip()
+  @get('/producto-servicios/count') // me entrega la cantidad de productos
   @response(200, {
     description: 'ProductoServicio model count',
     content: {'application/json': {schema: CountSchema}},
@@ -58,7 +56,8 @@ export class ProductoServicioController {
     return this.productoServicioRepository.count(where);
   }
 
-  @get('/producto-servicios')
+  @authenticate.skip()
+  @get('/producto-servicios')// me entrega un listado de todos los productos
   @response(200, {
     description: 'Array of ProductoServicio model instances',
     content: {
@@ -76,6 +75,7 @@ export class ProductoServicioController {
     return this.productoServicioRepository.find(filter);
   }
 
+  @authenticate.skip()
   @patch('/producto-servicios')
   @response(200, {
     description: 'ProductoServicio PATCH success count',
@@ -94,7 +94,7 @@ export class ProductoServicioController {
   ): Promise<Count> {
     return this.productoServicioRepository.updateAll(productoServicio, where);
   }
-
+  @authenticate.skip()
   @get('/producto-servicios/{id}')
   @response(200, {
     description: 'ProductoServicio model instance',
@@ -111,6 +111,7 @@ export class ProductoServicioController {
     return this.productoServicioRepository.findById(id, filter);
   }
 
+  @authenticate.skip()
   @patch('/producto-servicios/{id}')
   @response(204, {
     description: 'ProductoServicio PATCH success',
@@ -129,6 +130,7 @@ export class ProductoServicioController {
     await this.productoServicioRepository.updateById(id, productoServicio);
   }
 
+  @authenticate.skip()
   @put('/producto-servicios/{id}')
   @response(204, {
     description: 'ProductoServicio PUT success',

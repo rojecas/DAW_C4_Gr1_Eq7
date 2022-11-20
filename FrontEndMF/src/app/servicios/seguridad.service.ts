@@ -64,5 +64,14 @@ export class SeguridadService {
     return datosSring;
   }
 
+  ObtenerToken(){
+    let datosSring = localStorage.getItem('datosSesion');
+    if (datosSring){
+      let datos = JSON.parse(datosSring);
+      return datos.tk;
+    }else{
+      return '';
+    }
+  }
 
 }

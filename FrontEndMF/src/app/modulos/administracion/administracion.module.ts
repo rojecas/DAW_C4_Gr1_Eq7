@@ -28,6 +28,7 @@ import { ConsultarPlanesComponent } from './planes/consultar-planes/consultar-pl
 import { ActualizarPlanesComponent } from './planes/actualizar-planes/actualizar-planes.component';
 import { EliminarPlanesComponent } from './planes/eliminar-planes/eliminar-planes.component';
 import { ListarMascotasComponent } from './mascotas/listar-mascotas/listar-mascotas.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -61,7 +62,9 @@ import { ListarMascotasComponent } from './mascotas/listar-mascotas/listar-masco
   ],
   imports: [
     CommonModule,
-    AdministracionRoutingModule
+    AdministracionRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AdministracionModule { }

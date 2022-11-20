@@ -1,1 +1,42 @@
-<p>crear-prod-serv works!</p>
+<div class="container">
+    <div class="row">
+        <h3>Crear Productos / Servicios</h3>
+    </div>
+    <form [formGroup]="fgValidador" (ngSubmit)="GuardarProducto()" class="col s12 z-depth-6 card-panel">
+        <div class="row">
+            <div class="input-field col s6">
+                <i class="material-icons prefix">info</i>
+                <label for="nombre">Nombre:</label>
+                <input formControlName="nombre" name="nombre" type="text" required>
+            </div>
+            <div class="input-field col s6">
+                <i class="material-icons prefix">attach_money</i>
+                <label for="precio">Precio:</label>
+                <input formControlName="precio" id="precio" type="text" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">edit_square</i>
+                <label for="descripcion">Descripción:</label>
+                <input formControlName="descripcion" id="descripcion" type="text" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s10">
+                <i class="material-icons prefix">image</i>
+                <label for="imagen">Imagen:</label>
+                <input formControlName="imagen" id="imagen" type="text" required>
+            </div>
+        </div>
+        <div class="container">
+            <div class="input-field col s10">
+                <!--  <a href="#" class="btn waves-effect waves-blue col s8"> Ingresar </a> -->
+                <button [disabled]="!fgValidador.valid" class="btn waves-effect waves-blue col s6" type="submit"
+                    name="action">
+                    Crear Producto
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

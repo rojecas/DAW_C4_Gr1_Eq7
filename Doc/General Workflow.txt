@@ -295,11 +295,6 @@ npm i crypto-js
 
 npm i @types/crypto-js
 	
-// Install services
-// ng generate service <path>
-	ng g s <path>
-
-
 
 Modulos:
 - administracion
@@ -317,8 +312,11 @@ Modulos:
 	- Afiliaciones
     - Reportes
 	- ...
-	
-	495b0fdd3e418e2e881a1f3352e4ea67
-	495b0fdd3e418e2e881a1f3352e4ea67
-	19cd896aeeeb0698803146fec3ef4a59
-	
+
+// Generate services
+// ng generate service <path>
+	ng g s <path>
+	ng generate service <path>
+
+ng generate service servicios/seguridad
+ng generate service servicios/prodServ

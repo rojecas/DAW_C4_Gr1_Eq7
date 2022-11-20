@@ -9,11 +9,11 @@ export class ProductoServicio extends Entity {
   })
   id?: string;
 
-  @property({
-    type: 'string',
-    required: true,
-  })
-  tipo: string;
+  /*   @property({
+      type: 'string',
+      required: true,
+    })
+    tipo: string; */
 
   @property({
     type: 'string',
@@ -32,7 +32,13 @@ export class ProductoServicio extends Entity {
     required: true,
   })
   precio: number;
-
+  /* desde aqui */
+  @property({
+    type: 'string',
+    required: true,
+  })
+  imagen: string;
+  /* hasta aqui */
 
   constructor(data?: Partial<ProductoServicio>) {
     super(data);
